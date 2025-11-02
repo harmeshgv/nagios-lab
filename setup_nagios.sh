@@ -35,10 +35,7 @@ EOF'
 echo "🔄 Restarting Nagios to apply permissions..."
 docker-compose restart
 
-# Step 5: Create directory
-mkdir nagios-config
-
-# Step 8: Display access URL
+# Step 5: Display access URL
 SERVER_IP=$(hostname -I | awk '{print $1}')
 echo "✅ Nagios setup completed successfully!"
 echo "🌐 Access the Nagios Web UI at: http://$SERVER_IP:8080/nagios"
